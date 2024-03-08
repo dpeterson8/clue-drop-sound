@@ -17,7 +17,7 @@ import net.runelite.client.plugins.PluginDescriptor;
 
 @Slf4j
 @PluginDescriptor(
-	name = "Example"
+	name = "Clue Drop Sounds"
 )
 public class ClueDropSoundPlugin extends Plugin
 {
@@ -26,8 +26,6 @@ public class ClueDropSoundPlugin extends Plugin
 	@Inject
 	private Client client;
 
-	@Inject
-	private ClueDropSoundConfig config;
 
 	@Inject
 	private ItemManager itemManager;
@@ -41,10 +39,5 @@ public class ClueDropSoundPlugin extends Plugin
 		}
 	}
 
-	@Provides
-	ClueDropSoundConfig provideConfig(ConfigManager configManager)
-	{
-		return configManager.getConfig(ClueDropSoundConfig.class);
-	}
 
 }
